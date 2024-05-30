@@ -1,0 +1,85 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #16161a;
+}
+
+.login {
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fffffe;
+    border-radius: 5px;
+    height: 80vh;
+    justify-content: center;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__input {
+    padding: 5px 10px;
+    background-color: #242629;
+    color: #fffffe;
+}
+
+.login__button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: #7f5af0;
+    color: #fffffe;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.login__modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: pink;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    top: 50px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.login__modal--success {
+    background-color: rgba(0, 128, 0, 0.849);
+    animation-name: modal;
+    animation-duration: .5s;
+    animation-iteration-count: initial;
+}
+
+.login__modal--fail {
+    background-color: rgba(255, 0, 0, 0.856);
+    animation-name: modal;
+    animation-duration: .5s;
+    animation-iteration-count: initial;
+}
+
+@keyframes modal {
+    0% {
+        opacity: 0;
+        top: 10px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50px;
+    }
+}
