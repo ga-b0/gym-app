@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import { Landing, Home, Dashboard, Analytics, Admin } from './pages/Index'
+import { Landing, Home, Dashboard, Analytics, Admin, Logueado } from './pages/Index'
 import { ProtectedRoute } from './components/ProtectedRoute'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Rutinas } from './pages/Rutinas'
+import { Historial } from './pages/Historial'
+import { Puntos } from './pages/Puntos'
 import './App.css'
 
 function App() {
@@ -23,12 +26,13 @@ function App() {
 
   return (
     <BrowserRouter>
-
-
       <Routes>
         <Route index element={<Landing />}></Route>
         <Route path='/login' element={<Landing></Landing>}></Route>
-        <Route path='/logueado' element={<h1>LOGUEADO!!</h1>}></Route>
+        <Route path='/main' element={<Logueado />}></Route>
+        <Route path='/rutinas' element={<Rutinas />}></Route>
+        <Route path='/historial' element={<Historial />}></Route>
+        <Route path='/puntos' element={<Puntos />}></Route>
         <Route element={<ProtectedRoute isAllowed={!!user}/>}>
           <Route path="/home" element={<Home/>} />
           <Route path="/dashboard" element={<Dashboard/>} />

@@ -72,6 +72,14 @@ body {
     animation-iteration-count: initial;
 }
 
+.credenciales {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @keyframes modal {
     0% {
         opacity: 0;

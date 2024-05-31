@@ -1,5 +1,6 @@
 import { Navigate } from "react-router-dom"
 import { Login } from "./Login"
+import { Main } from "./Main"
 
 export const Landing = () => {
     return <Login />
@@ -9,6 +10,10 @@ export const Home = () => {
     return(
         <h2>Home Page (Private)</h2>
     )
+}
+
+export const Logueado = () => {
+    return <Main />
 }
 
 export const Dashboard = () => {

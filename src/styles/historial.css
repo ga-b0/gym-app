@@ -1,0 +1,48 @@
+/* Contenedor general */
+.historial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor de cada entrenamiento */
+.entreno {
+    background-color: #333333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Elementos de cada entrenamiento */
+.entreno-item {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+/* Estilo responsivo */
+@media (max-width: 740px) {
+    .entreno-item {
+        font-size: 14px;
+    }
+}
+
+
+.hitorial__button {
+    border: 3px solid #010101;
+    border-radius: 30px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 16px 32px;
+}
+
+.historial__button {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fffffe;
+}

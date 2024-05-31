@@ -25,6 +25,8 @@ export function Login() {
         let found = false;
         dataAPI.forEach(element => {
             if(email === element.email && password === element.password){
+                localStorage.setItem('name', element.name);
+                localStorage.setItem('email', element.email);
                 setMessage("Inicio de sesión exitoso")
                 setLogueado(true)
                 found = true;
@@ -38,7 +40,7 @@ export function Login() {
 
     if(logueado){
         setTimeout(() => {
-            navigate('/logueado');
+            navigate('/main');
         }, 2000);
     }
 
@@ -62,7 +64,7 @@ export function Login() {
             <h2 className="login__title">Inicio de Sesión</h2>
             <form className="login__form" onSubmit={handleSubmit}>
                 <label className="login__label" htmlFor="email">
-                    Email:
+                    Correo Electrónico:
                 </label>
                 <input 
                     id="email" 
@@ -84,6 +86,11 @@ export function Login() {
                 />
                 <button className="login__button" type="submit">Iniciar Sesión</button>
             </form>
+            <div className="credenciales">
+                <div>Credenciales de Prueba:</div>
+                <div>Correo: prueba@prueba.com</div>
+                <div>Contraseña: 123456789</div>
+            </div>
         </section>
     );
 }

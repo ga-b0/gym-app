@@ -1,0 +1,30 @@
+.section {
+    padding: 20px;
+    background-color: #16161a;
+    height: 100vh;
+    gap: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__routines {
+    border: 3px solid #010101;
+    padding: 30px 60px;
+    border-radius: 10px;
+    box-shadow: 10px 10px #010101;
+    transition: transform 0.5s ease;
+}
+
+.section__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fffffe;
+}
+
+.section__routines:hover {
+    background-color: #1a1a74;
+    transform: translateY(-10%);
+}
